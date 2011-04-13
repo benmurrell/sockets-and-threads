@@ -103,8 +103,8 @@ void Thread::start()
         Thread* aThread = static_cast<Thread*>( aThis );
 
         // Lock until we are told to start
-        mSemaphore.lock();
-        if( mStarted )
+        aThread->mSemaphore.lock();
+        if( aThread->mStarted )
         {
             aThread->mFunction();
         }

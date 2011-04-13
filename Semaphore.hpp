@@ -9,7 +9,7 @@
 #if defined( _WIN32 )
     #include <windows.h>
 #else
-    
+    #include <pthread.h>
 #endif
 
 //-----------------------------------------------------------------------------
@@ -44,6 +44,8 @@ class Semaphore
     private:
         #if defined( _WIN32 )
             HANDLE mSemaphore; //!< The windows semaphore handle
+        #else
+            pthread_mutex_t mMutex; //!< The posix mutex
         #endif
 
 }; // End of class Semaphore
