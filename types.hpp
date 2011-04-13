@@ -4,6 +4,8 @@
 #ifndef types_hpp_
 #define types_hpp_
 
+#include <assert.h>
+
 // Define signed and unsigned int types by size
 typedef unsigned int   uint32;
 typedef unsigned short uint16;
